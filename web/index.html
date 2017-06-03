@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<title>Summary</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="text">
+Upload text. Get summary!
+</div>
+<ul id="tab">
+<li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event,'1')">File Upload</a></li>
+<li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event,'2')">Paste</a></li>
+<li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event,'3')">Use URL</a></li>
+</ul>
+    
+<script>   
+    function openTab(evt, tabName) {
+    // Declare all variables
+    var i, tabcontent;
+    //alert('hi');
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabc");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display="none";
+    }
+
+    // Show the current tab
+    document.getElementById(tabName).style.display = "block";
+}
+    
+</script>
+<div id="1" class="tabc">
+<input type="text" name="filename" style="width: 400px; height: 20px">
+<button name="Browse" id="but" onclick="$('#file').trigger('click');">Browse</button>
+<input type="file" id="file" name="file" style="visibility: hidden;"/>
+</div>
+
+<div id="2" class="tabc">
+    <form action="Summary" method="POST">
+    <textarea rows="15" cols="59" name="text"> </textarea>
+    <br>
+    <input type="Submit" value="Submit">
+    </form>
+</div>
+
+<div id="3" class="tabc">
+<input type="text" name="url" style="width: 400px; height: 20px">
+<button name="Submit" id="but" style="background-color: #33cc33">Fetch</button>
+</div>    
+
+</body>
+</html>
