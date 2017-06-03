@@ -1,0 +1,5 @@
+Provided are the java files along with the training data set for the Extractive Summarization tool. 
+OpenNLP library has been used for some purposes. The jar file for the same needs to be added to your build path.
+The jar files required are loaced at "apache-opennlp-1.5.3-bin.zip" which can be downloaded here.(http://opennlp.apache.org/cgi-bin/download.cgi)
+In addition, you will need to download some model files namely en-ner-person.bin,en-sent.bin, en-token.bin. 
+These can be downloaded here(http://opennlp.sourceforge.net/models-1.5/).
