@@ -1,3 +1,9 @@
+SUMA- The Summarizer
+
+This is an extractive sumarization tool that provides a short summary of the provided document by extracting the most 
+important sentences of the document. Whether or not shouuld a sentence be added to the summary is decided by a Naive Bayes classifier which acts
+upon the document considering certain statistical and inguistic features like position, lengt, presence of keyword etc.
+
 Provided are the java files along with the training data set for the Extractive Summarization tool. 
 OpenNLP library has been used for some purposes. The jar file for the same needs to be added to your build path.
 The jar files required are located at "apache-opennlp-1.5.3-bin.zip" which can be downloaded here.(http://opennlp.apache.org/cgi-bin/download.cgi)
